@@ -3,6 +3,7 @@ import {
   AutoComplete,
   Button,
   Cascader,
+  ConfigProvider,
   DatePicker,
   Input,
   InputNumber,
@@ -62,7 +63,7 @@ const selectOptions = [
 ];
 
 const App: React.FC = () => (
-  <>
+  <ConfigProvider warning={{ strict: false }}>
     <Mentions style={{ width: 100 }} rows={1} />
     <Input.TextArea rows={1} style={{ width: 100 }} />
     <Button type="primary">Button</Button>
@@ -90,7 +91,7 @@ const App: React.FC = () => (
     <Input style={narrowStyle} suffix="Y" />
     <Input style={narrowStyle} />
     <Input style={narrowStyle} defaultValue="1" suffix="Y" />
-  </>
+  </ConfigProvider>
 );
 
 export default App;

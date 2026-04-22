@@ -109,12 +109,6 @@ const App: React.FC = () => (
         <Button ghost type="dashed">
           Dashed
         </Button>
-        <Button ghost type="text">
-          Text
-        </Button>
-        <Button ghost type="link">
-          Link
-        </Button>
         <Button ghost type="primary">
           Primary
         </Button>
