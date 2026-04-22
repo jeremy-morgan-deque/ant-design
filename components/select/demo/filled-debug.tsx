@@ -17,11 +17,23 @@ const App: React.FC = () => (
   <Flex gap={12} vertical>
     <Flex gap={8}>
       <Select {...sharedSelectProps} disabled />
-      <Select {...sharedSelectProps} disabled mode="multiple" placeholder="Outlined" />
+      <Select
+        {...sharedSelectProps}
+        disabled
+        mode="multiple"
+        value={['lucy']}
+        placeholder="Outlined"
+      />
     </Flex>
     <Flex gap={8}>
       <Select {...sharedSelectProps} status="error" />
-      <Select {...sharedSelectProps} status="error" mode="multiple" placeholder="Outlined" />
+      <Select
+        {...sharedSelectProps}
+        status="error"
+        mode="multiple"
+        value={['lucy']}
+        placeholder="Outlined"
+      />
     </Flex>
     <Flex gap={8}>
       <Select {...sharedSelectProps} disabled status="error" />
@@ -30,6 +42,7 @@ const App: React.FC = () => (
         disabled
         status="error"
         mode="multiple"
+        value={['lucy']}
         placeholder="Outlined"
       />
     </Flex>

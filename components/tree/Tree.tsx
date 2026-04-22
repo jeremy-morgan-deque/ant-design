@@ -297,7 +297,7 @@ const Tree = React.forwardRef<RcTree, TreeProps>((props, ref) => {
       showLine={showLine}
     />
   );
-  return (
+  const rcTreeElement = (
     <RcTree
       itemHeight={itemHeight}
       ref={ref}
@@ -328,10 +328,12 @@ const Tree = React.forwardRef<RcTree, TreeProps>((props, ref) => {
       selectable={selectable}
       switcherIcon={renderSwitcherIcon}
       draggable={draggableConfig}
-    >
-      {children}
-    </RcTree>
+    />
   );
+
+  return children === undefined
+    ? rcTreeElement
+    : React.cloneElement(rcTreeElement, undefined, children);
 });
 
 if (process.env.NODE_ENV !== 'production') {

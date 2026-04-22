@@ -7,9 +7,11 @@ const compileModules = [
   '.pnpm',
   '@asamuzakjp/css-color',
   '@asamuzakjp/dom-selector',
+  '@asamuzakjp/generational-cache',
   '@rc-component',
   // jsdom 27+ pulls ESM dependencies that need transform
   'parse5',
+  'entities',
   '@exodus',
   'jsdom',
   '@csstools',

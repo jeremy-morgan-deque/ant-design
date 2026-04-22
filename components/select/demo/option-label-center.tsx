@@ -140,7 +140,7 @@ const App: React.FC = () => (
         </Form.Item>
         <Form.Item
           label="Label"
-          name="bamboo"
+          name="bamboo2"
           initialValue="Bamboo"
           style={{
             boxShadow: '0 0 0 1px red',

@@ -33,7 +33,6 @@ import {
 
 type DirectionType = ConfigProviderProps['direction'];
 
-const InputGroup = Input.Group;
 const ButtonGroup = Button.Group;
 
 const { TreeNode } = Tree;
@@ -267,8 +266,8 @@ const Page: React.FC<{ placement: Placement }> = ({ placement }) => {
       <br />
       <Row>
         <Col span={24}>
-          <Divider titlePlacement="start">Input (Input Group) example</Divider>
-          <InputGroup size="large">
+          <Divider titlePlacement="start">Input (Space.Compact) example</Divider>
+          <Space.Compact size="large">
             <Row gutter={8}>
               <Col span={5}>
                 <Input defaultValue="0571" />
@@ -277,14 +276,14 @@ const Page: React.FC<{ placement: Placement }> = ({ placement }) => {
                 <Input defaultValue="26888888" />
               </Col>
             </Row>
-          </InputGroup>
+          </Space.Compact>
           <br />
-          <InputGroup compact>
+          <Space.Compact>
             <Input style={{ width: '20%' }} defaultValue="0571" />
             <Input style={{ width: '30%' }} defaultValue="26888888" />
-          </InputGroup>
+          </Space.Compact>
           <br />
-          <InputGroup compact>
+          <Space.Compact>
             <Select
               defaultValue="Option1"
               options={[
@@ -294,7 +293,7 @@ const Page: React.FC<{ placement: Placement }> = ({ placement }) => {
             />
             <Input style={{ width: '50%' }} defaultValue="input content" />
             <InputNumber />
-          </InputGroup>
+          </Space.Compact>
           <br />
           <Search placeholder="input search text" enterButton="Search" size="large" />
           <br />

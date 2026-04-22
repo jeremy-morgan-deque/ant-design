@@ -22,13 +22,13 @@ const dataSource = Array.from({ length: 46 }).map<DataType>((_, i) => ({
 }));
 
 const rowSelection: TableRowSelection<DataType> = {
-  renderCell: (checked, _record, index, node) => ({
-    props: { rowSpan: index % 2 === 0 ? 2 : 0 },
-    children: (
-      <>
-        {String(checked)}: {node}
-      </>
-    ),
+  renderCell: (checked, _record, _index, node) => (
+    <>
+      {String(checked)}: {node}
+    </>
+  ),
+  onCell: (_record, index) => ({
+    rowSpan: index! % 2 === 0 ? 2 : 0,
   }),
 };
 
